@@ -27,4 +27,9 @@ class Fecha
         $now = new \DateTime();
         return $now->diff($this->datetime)->format("j");
     }
+
+    public function getFechaStr(): string
+    {
+        return $this->datetime->format("d/m/Y");
+    }
 }
