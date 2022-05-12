@@ -1,0 +1,20 @@
+{
+    "name": "epl/ejercicio-examen",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "ITEC\\EPL\\Examen\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "eplq",
+            "email": "91148468+eplq@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.5"
+    }
+}
