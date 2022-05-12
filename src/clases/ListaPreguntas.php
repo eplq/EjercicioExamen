@@ -28,4 +28,22 @@ class ListadoPreguntas
             return $carry + $item->getNotaMaxima();
         }, 0);
     }
+
+    public function getPregunta(int $id): Pregunta
+    {
+        foreach ($this->preguntas as $pregunta) {
+            if ($pregunta->getId() === $id) {
+                return $pregunta;
+            }
+        }
+
+        return null;
+    }
+
+    public function searchByString(string $str)
+    {
+        return array_filter($this->preguntas, function ($item) use ($str) {
+            return str_contains($item->getPregunta(), $str);
+        });
+    }
 }
