@@ -47,6 +47,6 @@ class Examen
 
     public function getProfesor()
     {
-        return $this->getProfesor;
+        return $this->profesor;
     }
 }
