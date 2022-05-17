@@ -16,8 +16,13 @@ class Examen
     private Asignatura $asignatura;
     private Profesor $profesor;
 
-    public function __construct(Fecha $fecha, Hora $hora, ListadoPreguntas $listadoPreguntas, Asignatura $asignatura, Profesor $profesor)
-    {
+    public function __construct(
+        Fecha $fecha,
+        Hora $hora,
+        ListadoPreguntas $listadoPreguntas,
+        Asignatura $asignatura,
+        Profesor $profesor
+    ) {
         $this->fecha = $fecha;
         $this->hora = $hora;
         $this->listadoPreguntas = $listadoPreguntas;
