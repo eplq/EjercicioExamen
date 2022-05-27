@@ -31,11 +31,6 @@ class Profesor
         return $this->nombre;
     }
 
-    public function getFechaNacimiento(): Fecha
-    {
-        return $this->fechaNacimiento;
-    }
-
     public function getFechaNacimientoStr(): string
     {
         return $this->fechaNacimiento->getFechaStr();
