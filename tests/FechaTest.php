@@ -9,7 +9,7 @@ class FechaTest extends TestCase
 {
     public function testFactory()
     {
-        $prueba = Fecha::create(2022, 10, 20);
+        $prueba = Fecha::create(2070, 10, 20);
 
         $this->assertInstanceOf(Fecha::class, $prueba);
 
@@ -21,7 +21,22 @@ class FechaTest extends TestCase
      */
     public function testDateStr(Fecha $instancia)
     {
-        $this->assertEquals("20/10/2022", (string) $instancia);
-        $this->assertEquals("20/10/2022", $instancia->getFechaStr());
+        $this->assertEquals("20/10/2070", (string) $instancia);
+        $this->assertEquals("20/10/2070", $instancia->getFechaStr());
+
+        return $instancia;
+    }
+
+    /**
+     * @depends testDateStr
+     */
+    public function testDaysLeft(Fecha $instancia)
+    {
+        $hoy = new \DateTime();
+        $fechaFutura = new \DateTime();
+        $fechaFutura->setDate(2070, 10, 20);
+        $dias = $fechaFutura->diff($hoy)->format("j");
+
+        $this->assertEquals($dias, $instancia->getDaysLeft());
     }
 }
