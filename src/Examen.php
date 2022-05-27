@@ -4,7 +4,7 @@ namespace ITEC\EPL\Examen;
 
 use ITEC\EPL\Examen\Clases\Fecha;
 use ITEC\EPL\Examen\Clases\Hora;
-use ITEC\EPL\Examen\Clases\ListadoPreguntas;
+use ITEC\EPL\Examen\Clases\ListaPreguntas;
 use ITEC\EPL\Examen\Clases\Asignatura;
 use ITEC\EPL\Examen\Clases\Profesor;
 
@@ -12,20 +12,20 @@ class Examen
 {
     private Fecha $fecha;
     private Hora $hora;
-    private ListadoPreguntas $listadoPreguntas;
+    private ListaPreguntas $listaPreguntas;
     private Asignatura $asignatura;
     private Profesor $profesor;
 
     public function __construct(
         Fecha $fecha,
         Hora $hora,
-        ListadoPreguntas $listadoPreguntas,
+        ListaPreguntas $listaPreguntas,
         Asignatura $asignatura,
         Profesor $profesor
     ) {
         $this->fecha = $fecha;
         $this->hora = $hora;
-        $this->listadoPreguntas = $listadoPreguntas;
+        $this->listaPreguntas = $listaPreguntas;
         $this->asignatura = $asignatura;
         $this->profesor = $profesor;
     }
@@ -40,9 +40,9 @@ class Examen
         return $this->hora;
     }
 
-    public function getListadoPreguntas()
+    public function getListaPreguntas()
     {
-        return $this->listadoPreguntas;
+        return $this->listaPreguntas;
     }
 
     public function getAsignatura()
