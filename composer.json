@@ -3,7 +3,8 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "ITEC\\EPL\\Examen\\": "src/"
+            "ITEC\\EPL\\Examen\\": "src/",
+            "ITEC\\EPL\\Examen\\Clases\\": "src/clases/"
         }
     },
     "authors": [
