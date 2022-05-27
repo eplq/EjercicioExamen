@@ -2,7 +2,7 @@
 
 namespace ITEC\EPL\Examen\Clases;
 
-class ListadoPreguntas
+class ListaPreguntas
 {
     private array $preguntas;
     private static int $lastid = 0;
@@ -29,7 +29,7 @@ class ListadoPreguntas
         }, 0);
     }
 
-    public function getPregunta(int $id): Pregunta
+    public function getPregunta(int $id): Pregunta | null
     {
         foreach ($this->preguntas as $pregunta) {
             if ($pregunta->getId() === $id) {
